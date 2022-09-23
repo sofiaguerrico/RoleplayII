@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public class Archer :ICharacters
+    public class Archer : ICharacters, IInteractions
     {
         private int health = 100;
 
