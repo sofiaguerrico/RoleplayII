@@ -26,7 +26,7 @@ namespace Test.Library
             Wizard1.ReceiveAttack(Knight1.AttackValue);
             
             
-            Assert.AreEqual(80, Wizard1.Health);
+            Assert.AreEqual(75, Wizard1.Health);
         }
 
         [Test]
