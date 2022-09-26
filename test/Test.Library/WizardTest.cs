@@ -15,10 +15,16 @@ namespace Test.Library
         [Test]
         public void TestReceiveAttackWizard()
         {
+            SpellsBook book = new SpellsBook();
+            book.Spells = new Spell[]{ new Spell() };
+
             Wizard Wizard1 = new Wizard("Juan");
             Knight Knight1 = new Knight ("Sofía");
+            Wizard1.Staff = new Staff();
+            Wizard1.SpellsBook = book;
             Knight1.Sword = new Sword();
             Wizard1.ReceiveAttack(Knight1.AttackValue);
+            
             
             Assert.AreEqual(80, Wizard1.Health);
         }
@@ -26,8 +32,14 @@ namespace Test.Library
         [Test]
         public void TestCureWizard()
         {
+
+            SpellsBook book = new SpellsBook();
+            book.Spells = new Spell[]{ new Spell() };
+
             Wizard Wizard1 = new Wizard("Juan");
             Knight Knight1 = new Knight ("Sofía");
+            Wizard1.Staff = new Staff();
+            Wizard1.SpellsBook = book;
             Knight1.Sword = new Sword();
             Wizard1.ReceiveAttack(Knight1.AttackValue);
             Wizard1.Cure();
