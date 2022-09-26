@@ -17,10 +17,11 @@ namespace Test.Library
         {
             Archer Archer1 = new Archer("Nacho");
             Dwarf Dwarf1 = new Dwarf ("Nando");
+            Archer1.Helmet = new Helmet();
             Dwarf1.Axe = new Axe();
             Archer1.ReceiveAttack(Dwarf1.AttackValue);
             
-            Assert.AreEqual(75, Archer1.Health);
+            Assert.AreEqual(78, Archer1.Health);
         }
 
         [Test]
@@ -28,6 +29,7 @@ namespace Test.Library
         {
             Archer Archer1 = new Archer("Nacho");
             Dwarf Dwarf1 = new Dwarf ("Nando");
+            Archer1.Helmet = new Helmet();
             Dwarf1.Axe = new Axe();
             Archer1.ReceiveAttack(Dwarf1.AttackValue);
             Archer1.Cure();
